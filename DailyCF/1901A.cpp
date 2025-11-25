@@ -1,40 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
-int main(){
-
+int main() {
     int t;
     cin >> t;
-    int n, x;
-    cin >> n;
-    cin >> x;
-    
-    int fuel;
-    vector <int> p;
-    for(int i=0; i<n; i++){
-        cin >> p[i];
-    }
+    while (t--) {
+        int n, x;
+        cin >> n >> x;
 
-    while(t--){
-
-        fuel = x;
-        int count =0;
-        int ans = 0;
-        
-        for(int j=1; j<=x; j++){
-            for(int k=0; k<n; k++){
-                if(j == p[k]){
-                    fuel = x;
-                
-                }
-                else{
-                    count-=1;
-                    ans+=1;
-                }
-            }
+        vector<int> p(n);
+        for (int i = 0; i < n; i++) {
+            cin >> p[i];
         }
-                
+        int ans = p[0];
+        for (int i = 1; i < n; i++) {
+            ans = max(ans, p[i] - p[i - 1]); 
+        }
+        ans = max(ans, 2 * (x - p[n - 1])); 
+
+        cout << ans << "\n";
     }
-    cout<<"ans";
+    return 0;
 }
