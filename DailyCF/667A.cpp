@@ -4,7 +4,7 @@ using namespace std;
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
-
+    //it is just for the streak
     int n, h;
     cin >> n >> h;
 
