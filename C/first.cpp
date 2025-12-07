@@ -1,9 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    string s;
-    cin >> s;
-    cout << "You typed: " << s << "\n";
-}
 
+
+int main(){
+        int a;
+        cout<<"Enter the digit";
+        cin >> a;
+        cout <<"Wasup bitches from Neovim" << " " <<a;
+}
